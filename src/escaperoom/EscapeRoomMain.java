@@ -76,8 +76,8 @@ public class EscapeRoomMain extends JFrame {
 			
 	private Image selectedImage;// = new ImageIcon(Main.class.getResource("../images/최악의세대 Start Image.png")).getImage(); 
 	private Image titleImage;// = new ImageIcon(Main.class.getResource("../images/최악의세대 Title Image.png")).getImage();									
-	Music intromusic = new Music("intromusic.mp3", true);
-	private Music selectedMusic;
+//	Music intromusic = new Music("intromusic.mp3", true);
+//	private Music selectedMusic;
 	public static int nowSelected = 0;	//현재선택된 곡 번호
 	
 	public EscapeRoomMain() {
@@ -92,7 +92,7 @@ public class EscapeRoomMain extends JFrame {
 		setLayout(null);
 		
 		
-		intromusic.start();
+//		intromusic.start();
 		
 		trackList.add(new Track("Step1 Start Image.png", "EscapeRoom Game Image.jpg", 
 				"헬스장 Game Music.mp3", "Raging Streets - SefChol.mp3","hintImage.jpg","500"));
@@ -145,7 +145,7 @@ public class EscapeRoomMain extends JFrame {
 
 			@Override
 			public void mousePressed(MouseEvent e) {
-			intromusic.close();			
+//			intromusic.close();			
 			enterMain();
 			}
 		});
@@ -394,12 +394,12 @@ public class EscapeRoomMain extends JFrame {
 	}
 	
 	public void selectTrack(int nowSelected) {
-		if(selectedMusic != null)
-			selectedMusic.close();
+//		if(selectedMusic != null)
+//			selectedMusic.close();
 		
 		selectedImage = new ImageIcon(Main.class.getResource("../images/" + trackList.get(nowSelected).getStartImage())).getImage();
-		selectedMusic = new Music(trackList.get(nowSelected).getStartMusic(), true);
-		selectedMusic.start();
+//		selectedMusic = new Music(trackList.get(nowSelected).getStartMusic(), true);
+//		selectedMusic.start();
 	}
 	
 	public void selectLeft() {
@@ -417,11 +417,11 @@ public class EscapeRoomMain extends JFrame {
 			}
 	
 	public void gameStart(int nowSelected, String difficulty) {
-		if(selectedMusic != null)
-		selectedMusic.close();
-		
-		selectedMusic = new Music(trackList.get(nowSelected).getGameMusic(), true);
-		selectedMusic.start();
+//		if(selectedMusic != null)
+//		selectedMusic.close();
+//		
+//		selectedMusic = new Music(trackList.get(nowSelected).getGameMusic(), true);
+//		selectedMusic.start();
 		
 		isMainScreen = false;
 		leftButton.setVisible(false);
